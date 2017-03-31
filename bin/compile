@@ -6,7 +6,7 @@
 # This compiles assets to `public/webpack` when using default
 # configuration.
 
-set -o errexit # exit on error
+# set -o errexit # exit on error
 
 build_dir=$1
 cache_dir=$2
@@ -29,8 +29,6 @@ export_env_dir() {
 }
 
 export_env_dir
-
-echo "-----> Using new version of buildpack"
 
 echo "-----> gem install bundler"
 gem install bundler --no-document
