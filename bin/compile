@@ -6,7 +6,7 @@
 # This compiles assets to `public/webpack` when using default
 # configuration.
 
-# set -o errexit # exit on error
+set -o errexit # exit on error
 
 build_dir=$1
 cache_dir=$2
@@ -40,3 +40,5 @@ echo "-----> bundle exec rake webpack:compile"
 bundle exec rake webpack:compile --trace
 echo "-----> npm prune"
 npm prune
+
+exit 0 # Make sure error from prune does not persist
